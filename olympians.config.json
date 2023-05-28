@@ -1,0 +1,163 @@
+{
+  "name": "olympians",
+  "version": "0.0.1",
+  "description": "An automation test system",
+  "services": [
+    {
+      "name": "aegis",
+      "version": "0.0.1",
+      "description": "automation test framework, a python library",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "aphrodite",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "apollo",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ares",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "artemis",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "athena",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "demeter",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "dionysus",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "hephaestus",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "hera",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "hermes",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "poseidon",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "zeus",
+      "version": "0.0.1",
+      "description": "",
+      "envs": [
+        {
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
