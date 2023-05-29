@@ -4,32 +4,17 @@ Author: Yijie.Wu
 Email: 1694517106@qq.com
 """
 
-import os
-
-from flask import Flask
-
-from settings import config
-from extensions import db
+from fastapi import FastAPI
 
 
-def create_app(config_name=None):
-    if config_name is None:
-        config_name = os.getenv("FLASK_CONFIG", "development")
+def create_app():
+    app = FastAPI(title="Demeter", description="File server")
 
-    app = Flask("app")
-
-    app.config.from_object(config[config_name])
-    register_extensions(app)
-    register_commands(app)
+    register_router(app)
 
     return app
 
 
-def register_extensions(app):
-    db.init_app(app)
-
-
-def register_commands(app):
-    @app.cli.command()
-    def initdb():
-        pass
+def register_router(app: FastAPI):
+    from .api.v1 import api_router as router_v1
+    app.include_router(router_v1)
