@@ -2,22 +2,22 @@
   <div class="main-layout">
     <el-container>
       <el-header>
-        <MainHeader />
+        <IndexHeader />
       </el-header>
       <el-main>
-        <MainBody />
+        <IndexBody />
       </el-main>
       <el-footer>
-        <MainFooter />
+        <IndexFooter />
       </el-footer>
     </el-container>
   </div>
 </template>
 
 <script setup>
-import MainHeader from '@/components/MainHeader/MainHeader.vue'
-import MainBody from '@/components/MainBody/MainBody.vue'
-import MainFooter from '@/components/MainFooter/MainFooter.vue'
+import IndexHeader from '@/components/IndexHeader/IndexHeader.vue'
+import IndexBody from '@/components/IndexBody/IndexBody.vue'
+import IndexFooter from '@/components/IndexFooter/IndexFooter.vue'
 </script>
 
 <style scoped>
@@ -28,9 +28,14 @@ import MainFooter from '@/components/MainFooter/MainFooter.vue'
   padding: 0;
 }
 
+
 .el-header {
+  background: url("@/assets/image/hero-bg.webp");
   margin: 0;
   padding: 0;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-position-x: -1950px;
 }
 
 .el-main {
