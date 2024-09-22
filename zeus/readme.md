@@ -1,3 +1,4 @@
 # Zeus
 
-Monitor and manager
+测试系统中心枢纽, 负责所有服务的调度和监控
+
