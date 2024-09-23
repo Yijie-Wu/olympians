@@ -1,10 +1,10 @@
+<template>
+404
+</template>
+
 <script setup>
 
 </script>
-
-<template>
-  <router-view/>
-</template>
 
 <style scoped>
 
