@@ -6,7 +6,14 @@ const routes = [
     {
         path: '/',
         name: 'Main',
-        component: () => import('../views/main/MainView.vue')
+        component: () => import('../views/main/MainView.vue'),
+        children: [
+            {
+                path: '/',
+                name: 'MainIndex',
+                component: () => import('../views/main/index/MainIndex.vue'),
+            }
+        ]
     },
     {
         path: '/admin',

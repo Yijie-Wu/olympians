@@ -1,21 +1,23 @@
+<script setup>
+import MainMenu from '../../components/menus/MainMenu.vue'
+</script>
+
 <template>
-<div class="main-container">
-  <div class="main-head">
-    head
+  <div class="main-container">
+    <div class="main-head">
+      <MainMenu/>
+    </div>
+    <div class="main-body">
+      <router-view/>
+    </div>
   </div>
-  <div class="main-body">
-    body
-  </div>
-</div>
+
 </template>
 
-<script setup>
-
-</script>
 
 <style scoped>
 .main-container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,11 +31,16 @@
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 10px;
   box-sizing: border-box;
   border-bottom: 1px solid #3d444c;
 }
 
+.main-body {
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 
 
 </style>
