@@ -1,17 +1,18 @@
+<script setup>
+import AdminAside from '../../components/asides/AdminAside.vue'
+</script>
+
+
 <template>
   <div class="admin-container">
     <div class="admin-aside">
-      head
+      <AdminAside/>
     </div>
     <div class="admin-body">
       admin body
     </div>
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style scoped>
 .admin-container {
@@ -28,8 +29,6 @@
   height: 100vh;
   width: 240px;
   background-color: #03070CFF;
-  display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -43,7 +42,6 @@
   box-sizing: border-box;
   background-color: lightseagreen;
 }
-
 
 
 </style>
