@@ -7,12 +7,50 @@ const routes = [
         path: '/',
         name: 'Main',
         component: () => import('../views/main/MainView.vue'),
+        meta:{
+            title: '首页'
+        },
         children: [
             {
                 path: '/',
                 name: 'MainIndex',
                 component: () => import('../views/main/index/MainIndex.vue'),
-            }
+                meta:{
+                    title: '首页'
+                }
+            },
+            {
+                path: '/blog/categories',
+                name: 'MainBlogCategories',
+                component: () => import('../views/main/blog/BlogCategories.vue'),
+                meta:{
+                    title: '文章类型'
+                }
+            },
+            {
+                path: '/resource/categories',
+                name: 'MainResourceCategories',
+                component: () => import('../views/main/resource/ResourceCategories.vue'),
+                meta:{
+                    title: '资源类型'
+                }
+            },
+            {
+                path: '/testcase/product',
+                name: 'MainTestCasesProducts',
+                component: () => import('../views/main/testcase/Products.vue'),
+                meta:{
+                    title: '测试产品'
+                }
+            },
+            {
+                path: '/bugs/dashboard',
+                name: 'MainBugsDashboard',
+                component: () => import('../views/main/bug/BugsDashboard.vue'),
+                meta:{
+                    title: '缺陷看板'
+                }
+            },
         ]
     },
     {
@@ -56,17 +94,17 @@ const router = createRouter({
 
 
 // 路由拦截器
-router.beforeEach((to, from, next) => {
-    if (to.path.startsWith('/admin')) {
-        if (isLoginedUser()) {
-            next()
-        } else {
-            next('/auth/login')
-        }
-    } else {
-        next()
-    }
-})
+// router.beforeEach((to, from, next) => {
+//     if (to.path.startsWith('/admin')) {
+//         if (isLoginedUser()) {
+//             next()
+//         } else {
+//             next('/auth/login')
+//         }
+//     } else {
+//         next()
+//     }
+// })
 
 
 // router.beforeEach((to, from, next) => {

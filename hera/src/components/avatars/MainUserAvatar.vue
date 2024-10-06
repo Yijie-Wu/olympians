@@ -1,9 +1,9 @@
 <script setup>
 import {ref} from 'vue'
-import {Close} from "@element-plus/icons-vue";
+import {Close, Service, House, Setting, SwitchButton, DataBoard} from "@element-plus/icons-vue";
 import Avatar from '../../assets/images/avatar.png'
 
-const rightMenuDrawOpen = ref(false)
+let rightMenuDrawOpen = ref(false)
 </script>
 
 
@@ -28,35 +28,51 @@ const rightMenuDrawOpen = ref(false)
             <el-avatar :src="Avatar" :size="45" shape="square"/>
             <div style="margin-left: 10px;">
               <div style="font-weight: bold;">yijie</div>
-              <div><el-text truncated>yijie.wu@pegatestme.com</el-text></div>
+              <div>
+                <el-text truncated size="small">yijie.wu@pegatestme.com</el-text>
+              </div>
             </div>
           </div>
           <div class="aside-action">
-            <el-button round :icon="Close" size="small" type="success" @click="rightMenuDrawOpen=false"></el-button>
+            <el-button circle plain :icon="Close" size="small" type="success" @click="rightMenuDrawOpen=false"></el-button>
           </div>
         </div>
         <div class="aside-body">
           <div class="user-item" style="margin-top: 20px;">
-            <el-icon><Close/></el-icon>设置状态
+            <el-icon>
+              <Service/>
+            </el-icon>
+            <span class="ml-1">设置状态</span>
           </div>
           <div class="user-item">
-            <el-icon><Close/></el-icon>我的主页
+            <el-icon>
+              <House/>
+            </el-icon>
+            <span class="ml-1" @click="rightMenuDrawOpen=false">我的主页</span>
           </div>
           <div class="user-item">
-            <el-icon><Close/></el-icon>我的设置
+            <el-icon>
+              <Setting/>
+            </el-icon>
+            <span class="ml-1" @click="rightMenuDrawOpen=false">我的设置</span>
           </div>
           <div class="user-item">
-            <el-icon><Close/></el-icon>后台管理
+            <el-icon>
+              <DataBoard/>
+            </el-icon>
+            <span class="ml-1">后台管理</span>
           </div>
           <div class="user-item">
-            <el-icon><Close/></el-icon>登出系统
+            <el-icon>
+              <SwitchButton/>
+            </el-icon>
+            <span class="ml-1" @click="rightMenuDrawOpen=false">登出系统</span>
           </div>
         </div>
       </div>
     </template>
   </el-drawer>
 </template>
-
 
 
 <style scoped>
@@ -112,5 +128,8 @@ const rightMenuDrawOpen = ref(false)
   transition: .5s;
 }
 
+.ml-1 {
+  margin-left: 5px;
+}
 
 </style>

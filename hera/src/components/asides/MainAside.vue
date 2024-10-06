@@ -43,31 +43,31 @@ const leftMenuDrawOpen = ref(false)
               <el-icon>
                 <Sunny/>
               </el-icon>
-              <span>首页</span>
+              <span @click="leftMenuDrawOpen=false">首页</span>
             </el-menu-item>
-            <el-menu-item index="/testcases" style="padding: 0;">
+            <el-menu-item index="/testcase/product" style="padding: 0;">
               <el-icon>
                 <Collection/>
               </el-icon>
-              <span>测试用例</span>
+              <span @click="leftMenuDrawOpen=false">测试用例</span>
             </el-menu-item>
-            <el-menu-item index="/bugs" style="padding: 0;">
+            <el-menu-item index="/bugs/dashboard" style="padding: 0;">
               <el-icon>
                 <Lightning/>
               </el-icon>
-              <span>缺陷系统</span>
+              <span @click="leftMenuDrawOpen=false">缺陷管理</span>
             </el-menu-item>
-            <el-menu-item index="/resource" style="padding: 0;">
+            <el-menu-item index="/resource/categories" style="padding: 0;">
               <el-icon>
                 <Box/>
               </el-icon>
-              <span>资源中心</span>
+              <span @click="leftMenuDrawOpen=false">资源中心</span>
             </el-menu-item>
-            <el-menu-item index="/blogs" style="padding: 0;">
+            <el-menu-item index="/blog/categories" style="padding: 0;">
               <el-icon>
                 <Notebook/>
               </el-icon>
-              <span>测试博客</span>
+              <span @click="leftMenuDrawOpen=false">知识中心</span>
             </el-menu-item>
           </el-menu>
         </div>
@@ -75,7 +75,7 @@ const leftMenuDrawOpen = ref(false)
     </template>
     <template #footer>
       <div style="display: flex;">
-        <el-button type="success" round plain style="width:100%;">Current Version: 1.0.0</el-button>
+        <el-button type="success" round plain style="width:100%;">当前版本: 1.0.0</el-button>
       </div>
     </template>
   </el-drawer>
