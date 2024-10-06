@@ -40,6 +40,8 @@ import MainMenu from '../../components/menus/MainMenu.vue'
   margin: 0;
   padding: 0 10px;
   box-sizing: border-box;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
 }
 
 

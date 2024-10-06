@@ -1,9 +1,17 @@
 <script setup>
 import {ref} from 'vue'
+import {useRouter} from 'vue-router'
 import {Close, Service, House, Setting, SwitchButton, DataBoard} from "@element-plus/icons-vue";
 import Avatar from '../../assets/images/avatar.png'
 
+let route = useRouter()
 let rightMenuDrawOpen = ref(false)
+
+
+function goTo(path) {
+  route.push(path);
+}
+
 </script>
 
 
@@ -34,7 +42,8 @@ let rightMenuDrawOpen = ref(false)
             </div>
           </div>
           <div class="aside-action">
-            <el-button circle plain :icon="Close" size="small" type="success" @click="rightMenuDrawOpen=false"></el-button>
+            <el-button circle plain :icon="Close" size="small" type="success"
+                       @click="rightMenuDrawOpen=false"></el-button>
           </div>
         </div>
         <div class="aside-body">
@@ -44,23 +53,23 @@ let rightMenuDrawOpen = ref(false)
             </el-icon>
             <span class="ml-1">设置状态</span>
           </div>
-          <div class="user-item">
+          <div class="user-item" @click="goTo('/home/index');rightMenuDrawOpen=false">
             <el-icon>
               <House/>
             </el-icon>
-            <span class="ml-1" @click="rightMenuDrawOpen=false">我的主页</span>
+            <span class="ml-1">我的主页</span>
           </div>
-          <div class="user-item">
+          <div class="user-item" @click="goTo('/user/settings/profile');rightMenuDrawOpen=false">
             <el-icon>
               <Setting/>
             </el-icon>
-            <span class="ml-1" @click="rightMenuDrawOpen=false">我的设置</span>
+            <span class="ml-1">我的设置</span>
           </div>
           <div class="user-item">
             <el-icon>
               <DataBoard/>
             </el-icon>
-            <span class="ml-1">后台管理</span>
+            <span class="ml-1" @click="goTo('/admin')">后台管理</span>
           </div>
           <div class="user-item">
             <el-icon>

@@ -1,11 +1,8 @@
 <template>
-
+profile
 </template>
 
-<script>
-export default {
-  name: "ChangeProfile"
-}
+<script setup>
 </script>
 
 <style scoped>

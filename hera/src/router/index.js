@@ -51,6 +51,58 @@ const routes = [
                     title: '缺陷看板'
                 }
             },
+            {
+                path: '/home/index',
+                name: 'MainHomeIndex',
+                component: () => import('../views/user/UserHomeView.vue'),
+                meta:{
+                    title: '我的主页'
+                },
+                children: [
+                    {
+                        path: '/home/index',
+                        name: 'MainHomeIndex',
+                        component: () => import('../views/user/home/HomeIndex.vue'),
+                        meta:{
+                            title: '我的主页'
+                        },
+                    },
+                    {
+                        path: '/home/notifications',
+                        name: 'MainHomeNotifications',
+                        component: () => import('../views/user/home/Notifications.vue'),
+                        meta:{
+                            title: '我的通知'
+                        },
+                    },
+                ]
+            },
+            {
+                path: '/user/settings/profile',
+                name: 'MainUserSettings',
+                component: () => import('../views/user/UserSettingView.vue'),
+                meta:{
+                    title: '基本设置'
+                },
+                children: [
+                    {
+                        path: '/user/settings/profile',
+                        name: 'MainUserChangeProfile',
+                        component: () => import('../views/user/settings/ChangeProfile.vue'),
+                        meta:{
+                            title: '基本设置'
+                        },
+                    },
+                    {
+                        path: '/user/settings/change-avatar',
+                        name: 'MainUserChangeAvatar',
+                        component: () => import('../views/user/settings/ChangeAvatar.vue'),
+                        meta:{
+                            title: '修改头像'
+                        },
+                    },
+                ]
+            },
         ]
     },
     {

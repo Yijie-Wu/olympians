@@ -39,35 +39,35 @@ const leftMenuDrawOpen = ref(false)
               text-color="#fff"
               router
           >
-            <el-menu-item index="/" style="padding: 0;">
+            <el-menu-item index="/" style="padding: 0;" @click="leftMenuDrawOpen=false">
               <el-icon>
                 <Sunny/>
               </el-icon>
-              <span @click="leftMenuDrawOpen=false">首页</span>
+              <span>首页</span>
             </el-menu-item>
-            <el-menu-item index="/testcase/product" style="padding: 0;">
+            <el-menu-item index="/testcase/product" style="padding: 0;" @click="leftMenuDrawOpen=false">
               <el-icon>
                 <Collection/>
               </el-icon>
-              <span @click="leftMenuDrawOpen=false">测试用例</span>
+              <span>测试用例</span>
             </el-menu-item>
-            <el-menu-item index="/bugs/dashboard" style="padding: 0;">
+            <el-menu-item index="/bugs/dashboard" style="padding: 0;" @click="leftMenuDrawOpen=false">
               <el-icon>
                 <Lightning/>
               </el-icon>
-              <span @click="leftMenuDrawOpen=false">缺陷管理</span>
+              <span>缺陷管理</span>
             </el-menu-item>
-            <el-menu-item index="/resource/categories" style="padding: 0;">
+            <el-menu-item index="/resource/categories" style="padding: 0;" @click="leftMenuDrawOpen=false">
               <el-icon>
                 <Box/>
               </el-icon>
-              <span @click="leftMenuDrawOpen=false">资源中心</span>
+              <span>资源中心</span>
             </el-menu-item>
-            <el-menu-item index="/blog/categories" style="padding: 0;">
+            <el-menu-item index="/blog/categories" style="padding: 0;" @click="leftMenuDrawOpen=false">
               <el-icon>
                 <Notebook/>
               </el-icon>
-              <span @click="leftMenuDrawOpen=false">知识中心</span>
+              <span>知识中心</span>
             </el-menu-item>
           </el-menu>
         </div>

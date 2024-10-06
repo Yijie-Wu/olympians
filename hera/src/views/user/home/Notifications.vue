@@ -1,11 +1,9 @@
 <template>
-
+noti
 </template>
 
-<script>
-export default {
-  name: "Notifications"
-}
+<script setup>
+
 </script>
 
 <style scoped>

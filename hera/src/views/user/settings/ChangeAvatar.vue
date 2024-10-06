@@ -1,11 +1,8 @@
 <template>
-
+change avatar
 </template>
 
-<script>
-export default {
-  name: "ChangeAvatar"
-}
+<script setup>
 </script>
 
 <style scoped>

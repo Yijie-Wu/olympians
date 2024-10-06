@@ -1,5 +1,5 @@
 <template>
-
+home index
 </template>
 
 <script setup>
