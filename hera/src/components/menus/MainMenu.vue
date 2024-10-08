@@ -55,13 +55,11 @@ let breadcrumbList = computed(() => {
       <el-divider direction="vertical"/>
 
       <el-dropdown trigger="click">
-        <el-badge class="item" type="success" :offset="[-12, 2]" is-dot>
-          <div class="right-button-container">
-            <el-icon style="font-weight: bold;">
-              <Plus/>
-            </el-icon>
-          </div>
-        </el-badge>
+        <div class="right-button-container">
+          <el-icon style="font-weight: bold;">
+            <Plus/>
+          </el-icon>
+        </div>
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item>新建缺陷</el-dropdown-item>
@@ -72,7 +70,7 @@ let breadcrumbList = computed(() => {
       </el-dropdown>
 
       <el-dropdown trigger="click">
-        <el-badge class="item" type="success" :offset="[-12, 2]" is-dot>
+        <el-badge class="item" type="danger" :offset="[-12, 2]" is-dot>
           <div class="right-button-container">
             <el-icon style="font-weight: bold;">
               <Lightning/>
@@ -90,7 +88,7 @@ let breadcrumbList = computed(() => {
       </el-dropdown>
 
       <el-dropdown trigger="click">
-        <el-badge class="item" type="success" :offset="[-12, 2]" is-dot>
+        <el-badge class="item" type="danger" :offset="[-12, 2]" is-dot>
           <div class="right-button-container">
             <el-icon style="font-weight: bold;">
               <MessageBox/>

@@ -16,11 +16,13 @@ function goTo(path) {
 
 
 <template>
-  <el-avatar
-      :src="Avatar"
-      :size="30"
-      @click="rightMenuDrawOpen = true"
-  />
+  <el-badge class="item" type="success" :offset="[-5, 2]" is-dot>
+    <el-avatar
+        :src="Avatar"
+        :size="30"
+        @click="rightMenuDrawOpen = true"
+    />
+  </el-badge>
 
   <el-drawer
       v-model="rightMenuDrawOpen"
@@ -48,10 +50,14 @@ function goTo(path) {
         </div>
         <div class="aside-body">
           <div class="user-item" style="margin-top: 20px;">
-            <el-icon>
-              <Service/>
-            </el-icon>
-            <span class="ml-1">设置状态</span>
+            <div style="display:flex;align-items: center;justify-content: space-between;width: 100%;">
+              <div>
+                <el-icon><Service/></el-icon><span class="ml-1">设置状态</span>
+              </div>
+              <div>
+                <el-button size="small" round type="success">在线</el-button>
+              </div>
+            </div>
           </div>
           <div class="user-item" @click="goTo('/home/index');rightMenuDrawOpen=false">
             <el-icon>
@@ -127,6 +133,7 @@ function goTo(path) {
   height: 36px;
   display: flex;
   padding: 0 5px;
+  margin-top: 5px;
   align-items: center;
   justify-content: flex-start;
 }

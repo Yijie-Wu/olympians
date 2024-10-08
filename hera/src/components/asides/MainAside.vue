@@ -1,6 +1,6 @@
 <script setup>
 import {ref} from 'vue'
-import {Close, Collection, Sunny, Notebook, Lightning, Box} from "@element-plus/icons-vue";
+import {Close, Collection, Sunny, Notebook, Lightning, Box, User} from "@element-plus/icons-vue";
 import Logo from '../../assets/images/logo.svg'
 
 const leftMenuDrawOpen = ref(false)
@@ -70,6 +70,7 @@ const leftMenuDrawOpen = ref(false)
               <span>知识中心</span>
             </el-menu-item>
           </el-menu>
+
         </div>
       </div>
     </template>
@@ -145,7 +146,6 @@ const leftMenuDrawOpen = ref(false)
 .main-aside-menu {
   border: none;
 }
-
 
 
 </style>

@@ -431,7 +431,7 @@ const searchText = ref('')
 .resources-category-header {
   height: 50px;
   /*background: linear-gradient();*/
-  background-color: #03f2f8;
+  background-color: #3d444c;
   width: 90%;
   margin: 5px auto;
   padding: 0 20px;

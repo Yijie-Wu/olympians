@@ -64,7 +64,7 @@ const routes = [
                         name: 'MainHomeIndex',
                         component: () => import('../views/user/home/HomeIndex.vue'),
                         meta:{
-                            title: '我的主页'
+                            title: '主页看板'
                         },
                     },
                     {
