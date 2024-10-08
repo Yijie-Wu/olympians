@@ -43,7 +43,7 @@ const leftMenuDrawOpen = ref(false)
               <el-icon>
                 <Sunny/>
               </el-icon>
-              <span>首页</span>
+              <span>系统首页</span>
             </el-menu-item>
             <el-menu-item index="/testcase/product" style="padding: 0;" @click="leftMenuDrawOpen=false">
               <el-icon>
