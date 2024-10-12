@@ -38,7 +38,7 @@ import MainMenu from '../../components/menus/MainMenu.vue'
 
 .main-body {
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   box-sizing: border-box;
   height: calc(100vh - 60px);
   overflow-y: scroll;

@@ -1,12 +1,12 @@
 <script setup>
-import {House, Collection, Lightning, Notebook, Box, Notification} from "@element-plus/icons-vue";
+import {House, VideoPlay, Grape,Lightning, Notebook, Box, Notification, Document, Collection,KnifeFork, DataLine, Picture} from "@element-plus/icons-vue";
 </script>
 
 <template>
   <div class="home-container">
     <div class="home-aside">
       <el-menu
-          active-text-color="#ffd04b"
+          active-text-color="orange"
           class="custom-menu"
           default-active="/home/index"
           text-color="#fff"
@@ -24,51 +24,63 @@ import {House, Collection, Lightning, Notebook, Box, Notification} from "@elemen
           </el-icon>
           <span>我的通知</span>
         </el-menu-item>
-        <el-menu-item index="tests">
+        <el-menu-item index="/home/tests">
           <el-icon>
             <Box/>
           </el-icon>
           <span>我的测试</span>
         </el-menu-item>
-        <el-menu-item index="blogs">
+        <el-menu-item index="/home/testcases">
+          <el-icon>
+            <Grape/>
+          </el-icon>
+          <span>我的用例</span>
+        </el-menu-item>
+        <el-menu-item index="/home/bugs">
+          <el-icon>
+            <Lightning/>
+          </el-icon>
+          <span>我的缺陷</span>
+        </el-menu-item>
+        <el-menu-item index="/home/blogs">
           <el-icon>
             <Notebook/>
           </el-icon>
           <span>我的文章</span>
         </el-menu-item>
-        <el-menu-item index="videos">
+        <el-menu-item index="/home/videos">
           <el-icon>
-            <Lightning/>
+            <VideoPlay/>
           </el-icon>
           <span>我的视频</span>
         </el-menu-item>
-        <el-menu-item index="apps">
+        <el-menu-item index="/home/apps">
           <el-icon>
-            <Lightning/>
+            <Document/>
           </el-icon>
           <span>我的程序</span>
         </el-menu-item>
-        <el-menu-item index="books">
+        <el-menu-item index="/home/books">
           <el-icon>
-            <Lightning/>
+            <Collection/>
           </el-icon>
           <span>我的书籍</span>
         </el-menu-item>
-        <el-menu-item index="tools">
+        <el-menu-item index="/home/tools">
           <el-icon>
-            <Lightning/>
+            <KnifeFork/>
           </el-icon>
           <span>我的工具</span>
         </el-menu-item>
-        <el-menu-item index="reports">
+        <el-menu-item index="/home/reports">
           <el-icon>
-            <Lightning/>
+            <DataLine/>
           </el-icon>
           <span>我的报告</span>
         </el-menu-item>
-        <el-menu-item index="pictures">
+        <el-menu-item index="/home/pictures">
           <el-icon>
-            <Lightning/>
+            <Picture/>
           </el-icon>
           <span>我的图片</span>
         </el-menu-item>
@@ -88,7 +100,7 @@ import {House, Collection, Lightning, Notebook, Box, Notification} from "@elemen
 }
 
 .home-aside {
-  width: 150px;
+  width: 200px;
   height: calc(100vh - 62px);
   box-sizing: border-box;
   border-right: 1px solid #3d444c;
@@ -100,15 +112,14 @@ import {House, Collection, Lightning, Notebook, Box, Notification} from "@elemen
 }
 
 .custom-menu {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
   border: none;
+  background-color: #2b2d30;
+  height: 100%;
 }
 
 .custom-menu .el-menu-item {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-right: 8px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 

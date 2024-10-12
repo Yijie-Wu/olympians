@@ -21,6 +21,7 @@ function goTo(path) {
         :src="Avatar"
         :size="30"
         @click="rightMenuDrawOpen = true"
+        class="avatar-logo"
     />
   </el-badge>
 
@@ -71,11 +72,11 @@ function goTo(path) {
             </el-icon>
             <span class="ml-1">我的设置</span>
           </div>
-          <div class="user-item">
+          <div class="user-item" @click="goTo('/admin')">
             <el-icon>
               <DataBoard/>
             </el-icon>
-            <span class="ml-1" @click="goTo('/admin')">后台管理</span>
+            <span class="ml-1">后台管理</span>
           </div>
           <div class="user-item">
             <el-icon>
@@ -91,6 +92,17 @@ function goTo(path) {
 
 
 <style scoped>
+.avatar-logo {
+  border: 2px solid lightseagreen;
+  box-sizing: border-box;
+}
+
+.avatar-logo:hover {
+  border: 2px solid darkorange;
+  transition: 1s;
+}
+
+
 .aside-container {
   display: flex;
   width: 100%;

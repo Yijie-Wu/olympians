@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import Logo from '../../assets/images/logo.svg'
+import Logo from '../../assets/images/logo.jpg'
 </script>
 
 <style scoped>

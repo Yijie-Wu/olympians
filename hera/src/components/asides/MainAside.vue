@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from 'vue'
-import {Close, Collection, Sunny, Notebook, Lightning, Box, User} from "@element-plus/icons-vue";
-import Logo from '../../assets/images/logo.svg'
+import {Close, Collection, Sunny, Notebook, Lightning, Box} from "@element-plus/icons-vue";
+import Logo from '../../assets/images/logo.png'
 
 const leftMenuDrawOpen = ref(false)
 </script>
@@ -24,11 +24,11 @@ const leftMenuDrawOpen = ref(false)
       <div class="aside-container">
         <div class="aside-header">
           <div class="aside-logo">
-            <el-avatar :src="Logo" :size="30"/>
-            <span style="margin-left: 10px;font-weight: bold;font-size: 20px;">奥林匹斯</span>
+            <el-image :src="Logo" style="height: 30px;width:50px;border-radius: 8px;border: 2px solid darkorange;"/>
+            <span style="margin-left: 10px;font-weight: bold;font-size: 18px;">华峰测控测试系统</span>
           </div>
           <div class="aside-action">
-            <el-button round :icon="Close" size="small" type="warning" @click="leftMenuDrawOpen=false"></el-button>
+            <el-button circle :icon="Close" size="small" @click="leftMenuDrawOpen=false"></el-button>
           </div>
         </div>
         <div class="aside-body">

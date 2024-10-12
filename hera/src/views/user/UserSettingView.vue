@@ -1,5 +1,5 @@
 <script setup>
-import {PictureRounded, Key, Lightning, Notebook, Box, Postcard} from "@element-plus/icons-vue";
+import {PictureRounded, Key, Notebook, Box, Postcard} from "@element-plus/icons-vue";
 </script>
 
 <template>
@@ -7,36 +7,36 @@ import {PictureRounded, Key, Lightning, Notebook, Box, Postcard} from "@element-
     <div class="home-aside">
       <el-menu
           active-text-color="#ffd04b"
-          class="main-aside-menu"
-          default-active="/"
+          class="custom-menu"
+          default-active="/user/settings/profile"
           text-color="#fff"
           router
       >
-        <el-menu-item index="/" style="padding: 0;">
+        <el-menu-item index="/user/settings/profile">
           <el-icon>
             <Postcard/>
           </el-icon>
           <span>基本设置</span>
         </el-menu-item>
-        <el-menu-item index="/testcase/product" style="padding: 0;">
+        <el-menu-item index="/user/settings/change-avatar">
           <el-icon>
             <PictureRounded/>
           </el-icon>
           <span>修改头像</span>
         </el-menu-item>
-        <el-menu-item index="/bugs/dashboard" style="padding: 0;">
+        <el-menu-item index="/user/settings/change-password">
           <el-icon>
             <Key/>
           </el-icon>
           <span>修改密码</span>
         </el-menu-item>
-        <el-menu-item index="/resource/categories" style="padding: 0;">
+        <el-menu-item index="/user/settings/tokens">
           <el-icon>
             <Box/>
           </el-icon>
           <span>令牌管理</span>
         </el-menu-item>
-        <el-menu-item index="/blog/categories" style="padding: 0;">
+        <el-menu-item index="/user/settings/test-settings">
           <el-icon>
             <Notebook/>
           </el-icon>
@@ -50,7 +50,6 @@ import {PictureRounded, Key, Lightning, Notebook, Box, Postcard} from "@element-
   </div>
 
 </template>
-
 
 
 <style scoped>
@@ -69,8 +68,15 @@ import {PictureRounded, Key, Lightning, Notebook, Box, Postcard} from "@element-
   flex: 1;
 }
 
-.main-aside-menu {
+.custom-menu {
   border: none;
+  background-color: #2b2d30;
+  height: 100%;
+}
+
+.custom-menu .el-menu-item {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 

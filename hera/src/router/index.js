@@ -75,6 +75,87 @@ const routes = [
                             title: '我的通知'
                         },
                     },
+
+                    {
+                        path: '/home/tests',
+                        name: 'MainHomeTests',
+                        component: () => import('../views/user/home/Tests.vue'),
+                        meta:{
+                            title: '我的测试'
+                        },
+                    },
+                    {
+                        path: '/home/testcases',
+                        name: 'MainHomeTestcases',
+                        component: () => import('../views/user/home/TestCases.vue'),
+                        meta:{
+                            title: '我的用例'
+                        },
+                    },
+                    {
+                        path: '/home/bugs',
+                        name: 'MainHomeBugs',
+                        component: () => import('../views/user/home/Bugs.vue'),
+                        meta:{
+                            title: '我的缺陷'
+                        },
+                    },
+                    {
+                        path: '/home/blogs',
+                        name: 'MainHomeBlogs',
+                        component: () => import('../views/user/home/Blogs.vue'),
+                        meta:{
+                            title: '我的文章'
+                        },
+                    },
+                    {
+                        path: '/home/videos',
+                        name: 'MainHomeVideos',
+                        component: () => import('../views/user/home/Videos.vue'),
+                        meta:{
+                            title: '我的视频'
+                        },
+                    },
+                    {
+                        path: '/home/apps',
+                        name: 'MainHomeApps',
+                        component: () => import('../views/user/home/Apps.vue'),
+                        meta:{
+                            title: '我的程序'
+                        },
+                    },
+                    {
+                        path: '/home/books',
+                        name: 'MainHomeBooks',
+                        component: () => import('../views/user/home/Books.vue'),
+                        meta:{
+                            title: '我的书籍'
+                        },
+                    },
+                    {
+                        path: '/home/tools',
+                        name: 'MainHomeTools',
+                        component: () => import('../views/user/home/Tools.vue'),
+                        meta:{
+                            title: '我的工具'
+                        },
+                    },
+                    {
+                        path: '/home/reports',
+                        name: 'MainHomeReports',
+                        component: () => import('../views/user/home/Reports.vue'),
+                        meta:{
+                            title: '我的报告'
+                        },
+                    },
+                    {
+                        path: '/home/pictures',
+                        name: 'MainHomePictures',
+                        component: () => import('../views/user/home/Pictures.vue'),
+                        meta:{
+                            title: '我的图片'
+                        },
+                    },
                 ]
             },
             {
@@ -82,7 +163,7 @@ const routes = [
                 name: 'MainUserSettings',
                 component: () => import('../views/user/UserSettingView.vue'),
                 meta:{
-                    title: '基本设置'
+                    title: '设置'
                 },
                 children: [
                     {
@@ -99,6 +180,30 @@ const routes = [
                         component: () => import('../views/user/settings/ChangeAvatar.vue'),
                         meta:{
                             title: '修改头像'
+                        },
+                    },
+                    {
+                        path: '/user/settings/change-password',
+                        name: 'MainUserChangePassword',
+                        component: () => import('../views/user/settings/ChangePassword.vue'),
+                        meta:{
+                            title: '修改密码'
+                        },
+                    },
+                    {
+                        path: '/user/settings/tokens',
+                        name: 'MainUserTokens',
+                        component: () => import('../views/user/settings/Tokens.vue'),
+                        meta:{
+                            title: '令牌列表'
+                        },
+                    },
+                    {
+                        path: '/user/settings/test-settings',
+                        name: 'MainUserTestSettings',
+                        component: () => import('../views/user/settings/TestSettings.vue'),
+                        meta:{
+                            title: '测试设置'
                         },
                     },
                 ]
