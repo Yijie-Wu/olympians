@@ -97,11 +97,12 @@ import {House, VideoPlay, Grape,Lightning, Notebook, Box, Notification, Document
 <style scoped>
 .home-container {
   display: flex;
+  box-sizing: border-box;
 }
 
 .home-aside {
   width: 200px;
-  height: calc(100vh - 62px);
+  height: calc(100vh - 60px);
   box-sizing: border-box;
   border-right: 1px solid #3d444c;
   overflow-y: scroll;

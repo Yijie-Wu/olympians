@@ -1,15 +1,18 @@
 <script setup>
 import {computed, ref} from 'vue'
+import {Search} from "@element-plus/icons-vue";
 
 const search = ref('')
-const tableHeight = window.innerHeight - 130
-const filterTableData = computed(() =>
-    tableData.filter(
-        (data) =>
-            !search.value ||
-            data.name.toLowerCase().includes(search.value.toLowerCase())
-    )
-)
+const select = ref('')
+const noti_type = ref(true)
+const tableHeight = window.innerHeight - 160
+// const filterTableData = computed(() =>
+//     tableData.filter(
+//         (data) =>
+//             !search.value ||
+//             data.name.toLowerCase().includes(search.value.toLowerCase())
+//     )
+// )
 const handleEdit = (index, row) => {
   console.log(index, row)
 }
@@ -19,23 +22,18 @@ const handleDelete = (index, row) => {
 
 const tableData = [
   {
-    date: '2016-05-03',
+    type: '系统',
     name: 'Tom',
     address: 'No. 189, Grove St, Los Angeles',
   },
   {
-    date: '2016-05-02',
-    name: 'John',
+    type: '测试',
+    name: 'Tom',
     address: 'No. 189, Grove St, Los Angeles',
   },
   {
-    date: '2016-05-04',
-    name: 'Morgan',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-01',
-    name: 'Jessy',
+    type: '系统',
+    name: 'Tom',
     address: 'No. 189, Grove St, Los Angeles',
   },
 ]
@@ -44,15 +42,42 @@ const tableData = [
 <template>
   <div class="item-container">
     <div class="item-header">
-      <div>1</div>
-      <div>2</div>
+      <div style="display: flex;align-items: center;flex: 1;">
+        <div style="margin-right: 20px;">
+          <el-switch
+              v-model="noti_type"
+              class="ml-2"
+              inline-prompt
+              style="--el-switch-on-color: #03f2f8; --el-switch-off-color: rgba(105,255,242,0.44)"
+              active-text="已经发布"
+              inactive-text="还未发布"
+          />
+        </div>
+        <div style="flex: 1;">
+          <el-input
+              v-model="search"
+              placeholder="请输入文章标题"
+          >
+            <template #append>
+              <el-button :icon="Search"/>
+            </template>
+          </el-input>
+        </div>
+      </div>
+      <div style="width: 180px;display: flex;align-items: center;justify-content: flex-end;">
+        <el-button type="success" round size="small" plain v-show="!noti_type">全部发布</el-button>
+        <el-button type="danger" round size="small" plain>全部删除</el-button>
+      </div>
     </div>
     <div class="item-body">
-      <el-table :data="filterTableData" border style="width: 100%" :height="tableHeight">
-        <el-table-column label="Date" prop="date"/>
-        <el-table-column label="Name" prop="name"/>
-        <el-table-column align="center" label="常规操作" width="150" >
+      <el-table :data="tableData" border style="width: 100%" :height="tableHeight">
+        <el-table-column label="类型" prop="type" width="100" fixed="left" align="center"/>
+        <el-table-column label="消息" prop="name"/>
+        <el-table-column align="center" label="常规操作" width="200">
           <template #default="scope">
+            <el-button size="small" round type="success" plain @click="handleEdit(scope.$index, scope.row)">
+              查看
+            </el-button>
             <el-button size="small" round type="warning" plain @click="handleEdit(scope.$index, scope.row)">
               编辑
             </el-button>
@@ -68,6 +93,15 @@ const tableData = [
           </template>
         </el-table-column>
       </el-table>
+    </div>
+    <div class="item-footer">
+      <el-pagination
+          size="small"
+          background
+          layout="prev, pager, next"
+          :total="50"
+          class="mt-4"
+      />
     </div>
   </div>
 
@@ -85,7 +119,7 @@ const tableData = [
 }
 
 .item-header {
-  height: 50px;
+  height: 40px;
   margin-bottom: 5px;
   border-bottom: 1px solid #3d444c;
   display: flex;
@@ -97,6 +131,15 @@ const tableData = [
 .item-body {
   flex: 1;
   margin: 0 2px;
+}
+
+.item-footer {
+  height: 40px;
+  border-top: 1px solid #3d444c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 </style>

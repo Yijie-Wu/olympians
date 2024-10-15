@@ -38,9 +38,10 @@ import AdminAside from '../../components/asides/AdminAside.vue'
 .admin-body {
   flex: 1;
   margin: 0;
-  padding: 0;
+  padding: 5px 10px;
   box-sizing: border-box;
-  background-color: lightseagreen;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 

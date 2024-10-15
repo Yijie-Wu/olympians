@@ -3,7 +3,7 @@ import {ref} from 'vue'
 import {Close, Collection, Sunny, Notebook, Lightning, Box} from "@element-plus/icons-vue";
 import Logo from '../../assets/images/logo.png'
 
-const leftMenuDrawOpen = ref(false)
+let leftMenuDrawOpen = ref(false)
 </script>
 
 <template>
