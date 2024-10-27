@@ -1,6 +1,6 @@
 <script setup>
 import {computed, ref} from "vue";
-import {useRoute} from 'vue-router'
+import {useRoute, useRouter} from 'vue-router'
 
 import MainLogo from '../../components/logos/MainLogo.vue'
 import MainAside from '../../components/asides/MainAside.vue'
@@ -8,6 +8,7 @@ import MainUserAvatar from '../../components/avatars/MainUserAvatar.vue'
 import {Lightning, Search, MessageBox, Plus} from "@element-plus/icons-vue";
 
 const route = useRoute()
+const router = useRouter()
 const searchDialog = ref(false)
 
 
@@ -63,8 +64,10 @@ let breadcrumbList = computed(() => {
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item>新建测试缺陷</el-dropdown-item>
-            <el-dropdown-item divided>新建测试用例</el-dropdown-item>
+            <el-dropdown-item divided>新建测试计划</el-dropdown-item>
+            <el-dropdown-item >新建测试用例</el-dropdown-item>
             <el-dropdown-item>新建测试集合</el-dropdown-item>
+            <el-dropdown-item divided @click="router.push('/new/blog')">新建博客文章</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>

@@ -116,10 +116,6 @@ function goTo(path) {
             </el-icon>
             <span class="ml-1">登出系统</span>
           </div>
-
-          <div>
-            {{user_store.userInfo}}
-          </div>
         </div>
       </div>
     </template>

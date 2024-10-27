@@ -52,6 +52,14 @@ const routes = [
                 }
             },
             {
+                path: '/new/blog',
+                name: 'MainNewBlog',
+                component: () => import('../views/main/new/NewBlog.vue'),
+                meta:{
+                    title: '新建博客'
+                }
+            },
+            {
                 path: '/home/index',
                 name: 'MainHome',
                 component: () => import('../views/user/UserHomeView.vue'),

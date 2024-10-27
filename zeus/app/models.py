@@ -50,7 +50,7 @@ class User(Base):
     nt = Column('nt', String(200), default='')
     email = Column('email', String(200), default='')
     avatar = Column('avatar', String(200), default='avatar.png')
-    status = Column('status', String(200), default='空闲')
+    status = Column('status', String(200), default='在线')
     status_info = Column('status_info', String(500), default='')
     username = Column('username', String(254), default='')
     password_hash = Column('password_hash', String(200), default='')
