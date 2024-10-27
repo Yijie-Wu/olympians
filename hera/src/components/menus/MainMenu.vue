@@ -62,7 +62,7 @@ let breadcrumbList = computed(() => {
         </div>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>新建缺陷</el-dropdown-item>
+            <el-dropdown-item>新建测试缺陷</el-dropdown-item>
             <el-dropdown-item divided>新建测试用例</el-dropdown-item>
             <el-dropdown-item>新建测试集合</el-dropdown-item>
           </el-dropdown-menu>

@@ -8,7 +8,7 @@ import {PictureRounded, Key, Notebook, Box, Postcard} from "@element-plus/icons-
       <el-menu
           active-text-color="#ffd04b"
           class="custom-menu"
-          default-active="/user/settings/profile"
+          :default-active="$route.path"
           text-color="#fff"
           router
       >

@@ -1,12 +1,11 @@
-<template>
+<script setup>
 
+</script>
+
+<template>
+roles
 </template>
 
-<script>
-export default {
-  name: "Roles"
-}
-</script>
 
 <style scoped>
 

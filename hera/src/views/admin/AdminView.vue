@@ -9,7 +9,7 @@ import AdminAside from '../../components/asides/AdminAside.vue'
       <AdminAside/>
     </div>
     <div class="admin-body">
-      admin body
+      <router-view/>
     </div>
   </div>
 </template>

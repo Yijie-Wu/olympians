@@ -1,11 +1,40 @@
 <script setup>
-import {ref} from 'vue'
+import {ref, onMounted, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {Close, Service, House, Setting, SwitchButton, DataBoard} from "@element-plus/icons-vue";
-import Avatar from '../../assets/images/avatar.png'
+import {removeToken} from "../../utils/token.js";
+import {showMessage} from "../../utils/message.js";
+import {useUserStore} from "../../stores/user/user.js";
+import {get_userinfo} from "../../apis/user.js";
+import {calcAvatar} from "../../utils/common.js";
 
+let user_store = useUserStore()
 let route = useRouter()
 let rightMenuDrawOpen = ref(false)
+
+
+onMounted(async () => {
+  await get_userinfo().then((res) => {
+    user_store.setUserInfo(res.data);
+  });
+});
+
+const avatar_url = computed(() => {
+  if (user_store.userInfo.avatar === undefined) {
+    return calcAvatar();
+  } else {
+    return calcAvatar(user_store.userInfo.avatar);
+  }
+});
+
+
+function logout() {
+  removeToken();
+  user_store.setUserInfo({});
+  user_store.isLogin = false;
+  showMessage('success', '登出成功');
+  route.push('/auth/login');
+}
 
 
 function goTo(path) {
@@ -18,7 +47,7 @@ function goTo(path) {
 <template>
   <el-badge class="item" type="success" :offset="[-5, 2]" is-dot>
     <el-avatar
-        :src="Avatar"
+        :src="avatar_url"
         :size="30"
         @click="rightMenuDrawOpen = true"
         class="avatar-logo"
@@ -36,11 +65,11 @@ function goTo(path) {
       <div class="aside-container">
         <div class="aside-header">
           <div class="aside-logo">
-            <el-avatar :src="Avatar" :size="45" shape="square"/>
+            <el-avatar :src="avatar_url" :size="45" shape="square"/>
             <div style="margin-left: 10px;">
-              <div style="font-weight: bold;">yijie</div>
-              <div>
-                <el-text truncated size="small">yijie.wu@pegatestme.com</el-text>
+              <div style="font-weight: bold;">{{ user_store.userInfo.username }}</div>
+              <div style="width:180px;">
+                <el-text truncated size="small">{{ user_store.userInfo.email }}</el-text>
               </div>
             </div>
           </div>
@@ -53,10 +82,13 @@ function goTo(path) {
           <div class="user-item" style="margin-top: 20px;">
             <div style="display:flex;align-items: center;justify-content: space-between;width: 100%;">
               <div>
-                <el-icon><Service/></el-icon><span class="ml-1">设置状态</span>
+                <el-icon>
+                  <Service/>
+                </el-icon>
+                <span class="ml-1">设置状态</span>
               </div>
               <div>
-                <el-button size="small" round type="success">在线</el-button>
+                <el-button size="small" round type="success">{{user_store.userInfo.status}}</el-button>
               </div>
             </div>
           </div>
@@ -72,17 +104,21 @@ function goTo(path) {
             </el-icon>
             <span class="ml-1">我的设置</span>
           </div>
-          <div class="user-item" @click="goTo('/admin')">
+          <div class="user-item" v-if="user_store.userInfo.role === '超级管理员'" @click="goTo('/admin')">
             <el-icon>
               <DataBoard/>
             </el-icon>
             <span class="ml-1">后台管理</span>
           </div>
-          <div class="user-item">
+          <div class="user-item" @click="logout()">
             <el-icon>
               <SwitchButton/>
             </el-icon>
-            <span class="ml-1" @click="rightMenuDrawOpen=false">登出系统</span>
+            <span class="ml-1">登出系统</span>
+          </div>
+
+          <div>
+            {{user_store.userInfo}}
           </div>
         </div>
       </div>

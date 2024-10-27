@@ -1,11 +1,9 @@
 <template>
-
+  register
 </template>
 
-<script>
-export default {
-  name: "Register"
-}
+<script setup>
+
 </script>
 
 <style scoped>

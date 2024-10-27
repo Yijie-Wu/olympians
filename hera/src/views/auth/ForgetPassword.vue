@@ -1,11 +1,9 @@
 <template>
-
+  forget password
 </template>
 
-<script>
-export default {
-  name: "ForgetPassword"
-}
+<script setup>
+
 </script>
 
 <style scoped>

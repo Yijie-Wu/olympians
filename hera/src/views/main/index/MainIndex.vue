@@ -1,5 +1,5 @@
 <script setup>
-
+import MainIndexFooter from '../../../components/footers/MainIndexFooter.vue'
 </script>
 
 <template>
@@ -34,6 +34,12 @@
         </el-card>
       </el-col>
     </el-row>
+
+    <el-row :gutter="10" style="margin-top: 10px;margin-bottom: 10px;height: 800px;">
+
+    </el-row>
+
+    <MainIndexFooter/>
   </div>
 </template>
 

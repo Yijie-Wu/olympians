@@ -35,7 +35,7 @@ let leftMenuDrawOpen = ref(false)
           <el-menu
               active-text-color="#ffd04b"
               class="main-aside-menu"
-              default-active="/"
+              :default-active="$route.path"
               text-color="#fff"
               router
           >

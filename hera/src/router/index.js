@@ -1,5 +1,5 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
-import {isLoginedUser} from "../utils/token.js";
+import {isAuthedUser} from "../utils/token.js";
 import {showMessage} from "../utils/message.js";
 
 const routes = [
@@ -53,7 +53,7 @@ const routes = [
             },
             {
                 path: '/home/index',
-                name: 'MainHomeIndex',
+                name: 'MainHome',
                 component: () => import('../views/user/UserHomeView.vue'),
                 meta:{
                     title: '我的主页'
@@ -219,13 +219,48 @@ const routes = [
                 path: '/admin',
                 name: 'AdminIndex',
                 component: () => import('../views/admin/index/AdminIndex.vue'),
-            }
+            },
+            {
+                path: '/admin/roles/list',
+                name: 'AdminRoleList',
+                component: () => import('../views/admin/basic/Roles.vue'),
+            },
+            {
+                path: '/admin/system-roles/list',
+                name: 'AdminSystemRoles',
+                component: () => import('../views/admin/basic/SystemRoles.vue'),
+            },
+            {
+                path: '/admin/system-roles/add',
+                name: 'AdminSystemRolesAdd',
+                component: () => import('../views/admin/basic/SystemRoleAdd.vue'),
+            },
+            {
+                path: '/admin/users',
+                name: 'AdminUsers',
+                component: () => import('../views/admin/basic/Users.vue'),
+            },
+            {
+                path: '/admin/users/add',
+                name: 'AdminUsersAdd',
+                component: () => import('../views/admin/basic/UserAdd.vue'),
+            },
         ]
     },
     {
         path: '/auth/login',
         name: 'AuthLogin',
         component: () => import('../views/auth/Login.vue'),
+    },
+    {
+        path: '/auth/register',
+        name: 'AuthRegister',
+        component: () => import('../views/auth/Register.vue'),
+    },
+    {
+        path: '/auth/forget-password',
+        name: 'AuthForgetPassword',
+        component: () => import('../views/auth/ForgetPassword.vue'),
     },
     {
         path: '/forbidden',
@@ -250,40 +285,26 @@ const router = createRouter({
 });
 
 
-// 路由拦截器
-// router.beforeEach((to, from, next) => {
-//     if (to.path.startsWith('/admin')) {
-//         if (isLoginedUser()) {
-//             next()
-//         } else {
-//             next('/auth/login')
-//         }
-//     } else {
-//         next()
-//     }
-// })
-
-
-// router.beforeEach((to, from, next) => {
-//     // 如果用户已经登录
-//     if (isLoginedUser()) {
-//         // 如果用户访问登录页面
-//         if (to.path === '/auth/login') {
-//             showMessage('warning', '您已经处于登陆状态')
-//             // 跳转到首页
-//             next('/')
-//         } else {
-//             // 否则放行
-//             next()
-//         }
-//     } else {
-//         if (to.path === '/auth/login') {
-//             next()
-//         } else {
-//             next('/auth/login')
-//         }
-//     }
-// })
+router.beforeEach((to, from, next) => {
+    // 如果用户已经登录
+    if (isAuthedUser()) {
+        // 如果用户访问登录页面
+        if (to.path === '/auth/login') {
+            showMessage('warning', '您已经处于登陆状态')
+            // 跳转到首页
+            next('/')
+        } else {
+            // 否则放行
+            next()
+        }
+    } else {
+        if (to.path === '/auth/login' || to.path === '/auth/register' || to.path === '/auth/forget-password') {
+            next()
+        } else {
+            next('/auth/login')
+        }
+    }
+})
 
 
 export default router

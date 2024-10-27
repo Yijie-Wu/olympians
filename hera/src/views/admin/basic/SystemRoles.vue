@@ -1,12 +1,11 @@
-<template>
+<script setup>
 
+</script>
+
+<template>
+system roles
 </template>
 
-<script>
-export default {
-  name: "SystemRoles"
-}
-</script>
 
 <style scoped>
 

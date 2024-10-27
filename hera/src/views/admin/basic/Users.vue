@@ -1,12 +1,10 @@
-<template>
+<script setup>
 
-</template>
-
-<script>
-export default {
-  name: "Users"
-}
 </script>
+
+<template>
+users
+</template>
 
 <style scoped>
 

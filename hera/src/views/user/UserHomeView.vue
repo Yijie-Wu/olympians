@@ -8,7 +8,7 @@ import {House, VideoPlay, Grape,Lightning, Notebook, Box, Notification, Document
       <el-menu
           active-text-color="orange"
           class="custom-menu"
-          default-active="/home/index"
+          :default-active="$route.path"
           text-color="#fff"
           router
       >

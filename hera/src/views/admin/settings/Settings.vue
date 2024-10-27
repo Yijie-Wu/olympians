@@ -1,12 +1,11 @@
-<template>
+<script setup>
 
+</script>
+
+<template>
+settings
 </template>
 
-<script>
-export default {
-  name: "Settings"
-}
-</script>
 
 <style scoped>
 

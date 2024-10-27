@@ -10,7 +10,7 @@ export function removeToken() {
     return localStorage.removeItem('token');
 }
 
-export function isLoginedUser() {
+export function isAuthedUser() {
     let token = getToken()
     return token !== null && token !== ''
 }
