@@ -56,7 +56,7 @@ const routes = [
                 name: 'MainNewBlog',
                 component: () => import('../views/main/new/NewBlog.vue'),
                 meta:{
-                    title: '新建博客'
+                    title: '新建文章'
                 }
             },
             {

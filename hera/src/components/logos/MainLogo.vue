@@ -2,6 +2,7 @@
   <el-avatar
       :src="Logo"
       :size="30"
+      shape="circle"
   />
 </template>
 

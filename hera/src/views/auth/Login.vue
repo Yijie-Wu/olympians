@@ -29,7 +29,7 @@ const windowHeight = window.innerHeight + 'px'
 
 const switch_auth_type = (() => {
   if (auth_type.value === true) {
-    auth_message.value = 'LDAP账号登录'
+    auth_message.value = 'LDAP 账号登录'
   }else {
     auth_message.value = '用户名密码登陆'
   }
@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
                   v-model="auth_type"
                   inline-prompt
                   style="--el-switch-on-color: #13ce66; --el-switch-off-color: rgba(13,220,202,0.44)"
-                  active-text="LDAP登陆"
+                  active-text="LDAP 登陆"
                   inactive-text="账号密码登陆"
                   @click="switch_auth_type()"
               />

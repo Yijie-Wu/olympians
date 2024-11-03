@@ -9,7 +9,6 @@ import {House, VideoPlay, Grape,Lightning, Notebook, Box, Notification, Document
           active-text-color="orange"
           class="custom-menu"
           :default-active="$route.path"
-          text-color="#fff"
           router
       >
         <el-menu-item index="/home/index">
@@ -104,7 +103,7 @@ import {House, VideoPlay, Grape,Lightning, Notebook, Box, Notification, Document
   width: 200px;
   height: calc(100vh - 60px);
   box-sizing: border-box;
-  border-right: 1px solid #3d444c;
+  border-right: 1px solid lightgrey;
   overflow-y: scroll;
 }
 
@@ -114,7 +113,6 @@ import {House, VideoPlay, Grape,Lightning, Notebook, Box, Notification, Document
 
 .custom-menu {
   border: none;
-  background-color: #2b2d30;
   height: 100%;
 }
 

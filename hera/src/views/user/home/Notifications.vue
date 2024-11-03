@@ -115,7 +115,7 @@ const tableData = [
 <style scoped>
 .item-container {
   margin: 5px 10px;
-  border: 1px solid #3d444c;
+  border: 1px solid lightgrey;
   height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@ const tableData = [
 .item-header {
   height: 40px;
   margin-bottom: 5px;
-  border-bottom: 1px solid #3d444c;
+  border-bottom: 1px solid lightgrey;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,7 +139,7 @@ const tableData = [
 
 .item-footer {
   height: 40px;
-  border-top: 1px solid #3d444c;
+  border-top: 1px solid lightgrey;
   display: flex;
   align-items: center;
   justify-content: center;

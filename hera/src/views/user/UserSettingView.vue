@@ -9,7 +9,6 @@ import {PictureRounded, Key, Notebook, Box, Postcard} from "@element-plus/icons-
           active-text-color="#ffd04b"
           class="custom-menu"
           :default-active="$route.path"
-          text-color="#fff"
           router
       >
         <el-menu-item index="/user/settings/profile">
@@ -61,7 +60,7 @@ import {PictureRounded, Key, Notebook, Box, Postcard} from "@element-plus/icons-
   width: 180px;
   height: calc(100vh - 62px);
   box-sizing: border-box;
-  border-right: 1px solid #3d444c;
+  border-right: 1px solid lightgrey;
 }
 
 .home-body {
@@ -70,7 +69,6 @@ import {PictureRounded, Key, Notebook, Box, Postcard} from "@element-plus/icons-
 
 .custom-menu {
   border: none;
-  background-color: #2b2d30;
   height: 100%;
 }
 

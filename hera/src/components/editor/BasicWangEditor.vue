@@ -13,10 +13,10 @@ const editor_class = ref('editor-basic')
 const editor_toolbar_class = ref('toolbar-basic')
 
 const props = defineProps({
-  editorHeight: {
-    type: Number,
-    default: 500
-  },
+  // editorHeight: {
+  //   type: Number,
+  //   default: 500
+  // },
   editorWidth: {
     type: String,
     default: '100%'
@@ -125,7 +125,7 @@ const customPaste = (editor, event, callback) => {
         :defaultConfig="editorConfig"
         :mode=props.mode
         v-model="data"
-        :style="{height: props.editorHeight + 'px', overflowY: props.hidden, width: props.editorWidth}"
+        :style="{overflowY: props.hidden, width: props.editorWidth}"
         @onCreated="handleCreated"
         @onChange="handleChange"
         @onDestroyed="handleDestroyed"
@@ -141,6 +141,7 @@ const customPaste = (editor, event, callback) => {
 .editor-basic {
   width: 100%;
   height: 100%;
+  border: 1px solid lightgrey;
 }
 
 .editor-basic-focus {

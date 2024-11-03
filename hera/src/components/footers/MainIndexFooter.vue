@@ -12,6 +12,5 @@
 .main-index-footer-container {
   height: 500px;
   width:100%;
-  background-color: #0F1318FF;
 }
 </style>

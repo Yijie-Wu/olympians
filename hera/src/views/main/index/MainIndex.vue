@@ -7,7 +7,7 @@ import MainIndexFooter from '../../../components/footers/MainIndexFooter.vue'
     <el-row :gutter="10">
       <el-col :span="24">
         <div class="carousel-container">
-          lbt
+          hhaha
         </div>
       </el-col>
     </el-row>
@@ -46,7 +46,8 @@ import MainIndexFooter from '../../../components/footers/MainIndexFooter.vue'
 <style scoped>
 .carousel-container {
   height: 600px;
-  background-color: lightslategrey;
   margin-top: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
 }
 </style>

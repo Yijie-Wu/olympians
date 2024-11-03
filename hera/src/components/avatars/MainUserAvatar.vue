@@ -58,7 +58,6 @@ function goTo(path) {
       v-model="rightMenuDrawOpen"
       direction="rtl"
       :size="300"
-      style="background-color: #0F1318FF;"
       :with-header="false"
   >
     <template #default>
@@ -183,9 +182,14 @@ function goTo(path) {
 }
 
 .user-item:hover {
-  background-color: #2b2d30;
+  background-color: rgba(40, 155, 64, 0.32);
   border-radius: 5px;
   transition: .5s;
+}
+
+.user-item-active {
+  background-color: rgba(40, 155, 64, 0.32);
+  border-radius: 5px;
 }
 
 .ml-1 {

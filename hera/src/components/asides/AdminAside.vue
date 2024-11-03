@@ -162,7 +162,7 @@ import Logo from '../../assets/images/logo.png'
 .admin-logo-container {
   height: 60px;
   box-sizing: border-box;
-  border-bottom: 1px solid #3d444c;
+  border-bottom: 1px solid lightgrey;
   display: flex;
   align-items: center;
   padding: 0 10px;

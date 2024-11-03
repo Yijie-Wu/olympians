@@ -28,11 +28,10 @@ import AdminAside from '../../components/asides/AdminAside.vue'
 .admin-aside {
   height: 100vh;
   width: 240px;
-  background-color: #03070CFF;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border-right: 1px solid #3d444c;
+  border-right: 1px solid lightgrey;
 }
 
 .admin-body {

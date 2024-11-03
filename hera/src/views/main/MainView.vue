@@ -27,13 +27,12 @@ import MainMenu from '../../components/menus/MainMenu.vue'
 
 .main-head {
   height: 60px;
-  background-color: #03070CFF;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0 10px;
   box-sizing: border-box;
-  border-bottom: 1px solid #3d444c;
+  border-bottom: 1px solid lightgrey;
 }
 
 .main-body {

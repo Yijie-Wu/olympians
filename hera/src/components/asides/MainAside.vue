@@ -17,7 +17,6 @@ let leftMenuDrawOpen = ref(false)
       v-model="leftMenuDrawOpen"
       direction="ltr"
       :size="300"
-      style="background-color: #0F1318FF;"
       :with-header="false"
   >
     <template #default>
@@ -36,7 +35,6 @@ let leftMenuDrawOpen = ref(false)
               active-text-color="#ffd04b"
               class="main-aside-menu"
               :default-active="$route.path"
-              text-color="#fff"
               router
           >
             <el-menu-item index="/" style="padding: 0;" @click="leftMenuDrawOpen=false">
@@ -127,7 +125,7 @@ let leftMenuDrawOpen = ref(false)
 .main-menu-left-button {
   width: 30px;
   height: 30px;
-  border: 1px solid #3d444c;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   display: flex;
   align-items: center;

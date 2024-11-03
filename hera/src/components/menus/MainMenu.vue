@@ -48,7 +48,7 @@ let breadcrumbList = computed(() => {
     </div>
     <div class="main-menu-right">
       <div class="search-button-container" @click="searchDialog=true">
-        <el-icon style="font-weight: bold;">
+        <el-icon>
           <Search/>
         </el-icon>
       </div>
@@ -144,7 +144,8 @@ let breadcrumbList = computed(() => {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: 0 15px;
+  margin: 0 8px;
+  border: 1px solid lightgrey;
 }
 
 .main-menu-right {
@@ -162,7 +163,7 @@ let breadcrumbList = computed(() => {
 .right-button-container {
   width: 30px;
   height: 30px;
-  border: 1px solid #3d444c;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -173,7 +174,7 @@ let breadcrumbList = computed(() => {
 .search-button-container {
   width: 30px;
   height: 30px;
-  border: 1px solid #3d444c;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   display: flex;
   align-items: center;
